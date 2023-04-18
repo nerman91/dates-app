@@ -5,6 +5,7 @@
 - React
 - TypeScript
 - Swiper
+- SCSS
 - Webpack
 
 ### Запуск:
