@@ -1,0 +1,59 @@
+.timePeriod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+
+  .year {
+    margin: 0;
+    font-family: 'PT Sans';
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 200px;
+
+    @media screen and (max-width: 1070px) {
+      font-size: 130px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 108px;
+    }
+
+    @media screen and (max-width: 640px) {
+      line-height: 110px;
+    }
+
+    @media screen and (max-width: 530px) {
+      font-size: 80px;
+      line-height: 90px;
+    }
+
+    @media screen and (max-width: 420px) {
+      font-size: 56px;
+      line-height: 72px;
+    }
+  }
+
+  .minYear {
+    color: #5d5fef;
+  }
+
+  .maxYear {
+    color: #ef5da8;
+  }
+
+  @media screen and (max-width: 1070px) {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  @media screen and (max-width: 640px) {
+    margin-bottom: 50px;
+  }
+
+  @media screen and (max-width: 520px) {
+    gap: 20px;
+    margin-bottom: 0;
+  }
+}

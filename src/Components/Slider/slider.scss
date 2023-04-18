@@ -1,0 +1,131 @@
+.sliderContainer {
+  position: relative;
+
+  .control {
+    position: absolute;
+
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    transition: background-color, 0.2s, opacity, 0.2s;
+    cursor: pointer;
+
+    &.prew {
+      left: -85px;
+      svg {
+        transform: rotate(180deg);
+      }
+
+      @media screen and (max-width: 1700px) {
+        left: -55px;
+      }
+    }
+
+    &.next {
+      right: -85px;
+      @media screen and (max-width: 1700px) {
+        right: -55px;
+      }
+    }
+
+    &:hover {
+      background-color: #fffefe;
+    }
+
+    &:disabled {
+      opacity: 0;
+      cursor: not-allowed;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .pagination {
+    display: none;
+    justify-content: center;
+    padding: 40px 0 20px;
+    gap: 10px;
+
+    .bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #42567a;
+      opacity: 0.4;
+
+      @media screen and (max-width: 520px) {
+        width: 6px;
+        height: 6px;
+      }
+    }
+
+    .activeBullet {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 60px 0 0;
+    }
+  }
+
+  .mySwiper {
+    display: flex;
+    overflow: hidden;
+
+    .wrapper {
+      display: flex;
+
+      .mySlide {
+        padding-top: 4px;
+        display: flex;
+        flex-direction: column;
+        animation: 1.2s showSlides;
+
+        .title {
+          margin: 0;
+          margin-bottom: 15px;
+          color: #3877ee;
+          font-weight: 400;
+          font-family: 'Bebas Neue';
+          font-size: 25px;
+
+          @media screen and (max-width: 520px) {
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
+
+        .description {
+          margin: 0;
+          color: #42567a;
+
+          @media screen and (max-width: 520px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes showSlides {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

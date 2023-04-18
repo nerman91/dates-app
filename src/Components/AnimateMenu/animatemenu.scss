@@ -1,0 +1,27 @@
+.animateMenu {
+  position: relative;
+  min-height: 355px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -65px;
+    right: -65px;
+    height: 1px;
+    background-color: #42567a;
+    opacity: 20%;
+
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    min-height: auto;
+  }
+}

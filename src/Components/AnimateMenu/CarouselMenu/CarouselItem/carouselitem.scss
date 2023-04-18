@@ -1,0 +1,61 @@
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(48, 62, 88, 0.5);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  background-color: #42567a;
+  transition: transform, 0.9s;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1);
+    background-color: #f4f5f9;
+  }
+
+  &.isActive {
+    transform: translate(-50%, -50%) scale(1);
+    background-color: #f4f5f9;
+  }
+}
+
+.carouselBtn {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: #42567a;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: transform, 0.9s;
+
+  .selected {
+    position: absolute;
+    left: 150%;
+    font-weight: 700;
+    transition: opacity 0.9s;
+    animation: 1.2s show;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,19 @@
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  padding: 110px 80px 40px 80px;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+
+  @media screen and (max-width: 640px) {
+    padding: 40px 20px 40px 20px;
+  }
+
+  @media screen and (max-width: 420px) {
+    padding: 20px 10px;
+  }
+}

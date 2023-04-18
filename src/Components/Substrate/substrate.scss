@@ -1,0 +1,33 @@
+.substrate {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  bottom: 0px;
+  right: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  opacity: 0.2;
+  z-index: -10;
+
+  &__item:nth-child(1) {
+    border-left: 1px solid #42567a;
+    border-right: 1px solid #42567a;
+  }
+
+  &__item:nth-child(2) {
+    border-right: 1px solid #42567a;
+  }
+
+  &__item:nth-child(3) {
+    border-left: 1px solid #42567a;
+    border-right: 1px solid #42567a;
+  }
+
+  &__item:nth-child(4) {
+    border-right: 1px solid #42567a;
+  }
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
+}

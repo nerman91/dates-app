@@ -1,0 +1,31 @@
+.eventsInfo {
+  display: none;
+  width: 100%;
+  padding: 30px 0;
+  border-bottom: 1px solid #c7cdd9;
+  color: #42567a;
+  font-size: 20px;
+  font-weight: 700;
+
+  @media screen and (max-width: 640px) {
+    display: block;
+    margin-bottom: 30px;
+    animation: 1.2s showInfo;
+  }
+
+  @media screen and (max-width: 520px) {
+    padding: 30px 0;
+  }
+}
+
+@keyframes showInfo {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
