@@ -16,4 +16,5 @@
 ### Запуск:
 
 `npm run dev` - запуск в режиме разработки, открыть можно по адресу `http://localhost:8000/`
+
 `npm run build` - production сборка
