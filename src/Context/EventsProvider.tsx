@@ -48,6 +48,7 @@ export function EventsContextProvider({ children }: IEventsContextProviderProps)
 
   function onSelectEvents(index: number) {
     setCurrentEventsCount(index);
+
     setData(
       data.map((event, i) => {
         if (event.isActive) {

@@ -5,11 +5,10 @@ import { EventsContext } from '../../../Context/EventsProvider';
 
 export function CarouselMenu() {
   const { deg, data } = React.useContext(EventsContext);
-  const transform = { transform: `rotate(${deg}deg)` };
 
   return (
     <div className={styles.carouselMenuWrapper}>
-      <div className={styles.carouselMenu} style={transform}>
+      <div className={styles.carouselMenu} style={{ transform: `rotate(${deg}deg)` }}>
         {data.map((_, index) => (
           <CarouselItem key={index} index={index} />
         ))}

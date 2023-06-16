@@ -11,7 +11,6 @@ interface ICarouselItemProps {
 export function CarouselItem({ index }: ICarouselItemProps) {
   const { onSelectEvents, deg, data, currentEventsCount } = React.useContext(EventsContext);
   const invertDeg = deg < 0 ? Math.abs(deg) : `-${deg}`;
-  const rotateBtn = { transform: `rotate(${invertDeg}deg)` };
   const position = { ...calculateCoordinates(index, data.length) };
 
   return (
@@ -20,7 +19,7 @@ export function CarouselItem({ index }: ICarouselItemProps) {
       style={position}>
       <button
         className={styles.carouselBtn}
-        style={rotateBtn}
+        style={{ transform: `rotate(${invertDeg}deg)` }}
         onClick={() => {
           onSelectEvents(index);
         }}>

@@ -21,7 +21,6 @@ export function Slider() {
         grabCursor
         slidesPerView={2}
         modules={[Navigation, Pagination]}
-        key={nanoid()}
         navigation={{
           nextEl: `.${styles.next}`,
           prevEl: `.${styles.prew}`
